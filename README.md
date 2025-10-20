@@ -1,18 +1,54 @@
-# Getting Started with Create React App
+# Learn-Clone Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A multi-page React application with internationalization support (English/Hindi) featuring various policy pages and information sections.
 
-## Available Scripts
+## 🚀 Quick Start
 
-In the project directory, you can run:
+### Development
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+## 📦 Deployment
+
+### Quick Deploy (Recommended)
+
+We recommend using **Vercel** or **Netlify** for easy, free deployment:
+
+#### Deploy to Vercel
+1. Push your code to GitHub
+2. Go to [vercel.com](https://vercel.com) and import your repository
+3. Click Deploy - it's that simple!
+
+#### Deploy to Netlify
+1. Push your code to GitHub
+2. Go to [netlify.com](https://netlify.com) and import your repository
+3. Build settings are already configured in `netlify.toml`
+
+### Self-Hosting
+
+Use our deployment script for quick local testing:
+
+```bash
+chmod +x deploy.sh
+./deploy.sh
+```
+
+For detailed deployment instructions, see [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)
+
+## 🔧 Available Scripts
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the app in development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
 ### `npm test`
 
@@ -26,6 +62,56 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
+
+## 🐳 Docker Deployment
+
+```bash
+# Build Docker image
+docker build -t learn-clone .
+
+# Run container
+docker run -p 80:80 learn-clone
+
+# Or use docker-compose
+docker-compose up -d
+```
+
+## 🌐 Custom Domain Setup
+
+After deploying to Vercel/Netlify:
+1. Go to your project settings
+2. Add your custom domain
+3. Update DNS records at your domain registrar
+4. SSL certificate will be automatically configured
+
+For self-hosted setup, see the detailed nginx configuration in [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)
+
+## 📁 Project Structure
+
+```
+learn-clone/
+├── public/              # Static files
+├── src/
+│   ├── components/      # Reusable components (Header, Footer)
+│   ├── context/         # React Context (Language)
+│   ├── pages/           # Page components
+│   ├── translations/    # i18n translations
+│   └── App.js          # Main app component
+├── Dockerfile          # Docker configuration
+├── nginx.conf          # Nginx configuration
+├── vercel.json         # Vercel deployment config
+├── netlify.toml        # Netlify deployment config
+└── DEPLOYMENT_GUIDE.md # Detailed deployment guide
+```
+
+## 🌍 Features
+
+- Multi-page React application
+- Internationalization (English/Hindi)
+- Responsive design
+- Multiple policy and information pages
+- SEO-friendly routing
+- Production-ready Docker setup
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 

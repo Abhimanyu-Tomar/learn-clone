@@ -1,0 +1,84 @@
+.footer {
+  background: #1a1a1a;
+  color: #ffffff;
+  padding: 60px 0 30px;
+  margin-top: 80px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.footer-section address {
+  font-style: normal;
+  line-height: 1.8;
+}
+
+.footer-section address p {
+  margin: 5px 0;
+  color: #b8b8b8;
+}
+
+.social-links,
+.legal-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social-links a,
+.legal-links a {
+  color: #b8b8b8;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-links a:hover,
+.legal-links a:hover {
+  color: #007bff;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 8px 0;
+  color: #b8b8b8;
+  font-size: 14px;
+}
+
+.sebi-reg {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0 20px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+

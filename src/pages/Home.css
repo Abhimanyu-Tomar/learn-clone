@@ -1,0 +1,156 @@
+.home {
+  min-height: calc(100vh - 200px);
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.hero-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 56px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 22px;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.cta-button {
+  background: white;
+  color: #667eea;
+  border: none;
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.transform-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f8f9fa;
+}
+
+.transform-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.transform-section h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+.transform-section p {
+  font-size: 20px;
+  color: #495057;
+  line-height: 1.6;
+}
+
+.newsletter-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: white;
+}
+
+.newsletter-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.newsletter-section h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+.newsletter-description {
+  font-size: 18px;
+  color: #495057;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 14px 20px;
+  font-size: 16px;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.newsletter-input:focus {
+  border-color: #667eea;
+}
+
+.newsletter-button {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.newsletter-button:hover {
+  background: #5568d3;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .transform-section h2,
+  .newsletter-section h2 {
+    font-size: 32px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-button {
+    width: 100%;
+  }
+}
+
