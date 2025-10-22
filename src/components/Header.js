@@ -5,10 +5,19 @@ import './Header.css';
 
 const Header = () => {
   const [showDisclaimer, setShowDisclaimer] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { language, changeLanguage, t, fontSize, increaseFontSize, decreaseFontSize, resetFontSize, theme, changeTheme } = useLanguage();
 
   const handleLanguageChange = (lang) => {
     changeLanguage(lang);
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -93,14 +102,34 @@ const Header = () => {
             </Link>
           </div>
           
-          <nav className="main-nav">
+          <button 
+            className={`hamburger-menu ${isMobileMenuOpen ? 'hidden' : ''}`}
+            onClick={toggleMobileMenu}
+            aria-label="Toggle menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          
+          <nav className={`main-nav ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
+            <div className="mobile-menu-header">
+              <button 
+                className="mobile-close-btn" 
+                onClick={closeMobileMenu}
+                aria-label="Close menu"
+              >
+                ×
+              </button>
+            </div>
             <ul>
-              <li><Link to="/">{t('header.home')}</Link></li>
-              <li><Link to="/about">{t('header.about')}</Link></li>
+              <li><Link to="/" onClick={closeMobileMenu}>{t('header.home')}</Link></li>
+              <li><Link to="/about" onClick={closeMobileMenu}>{t('header.about')}</Link></li>
               <li 
                 className="dropdown"
                 onMouseEnter={() => setShowDisclaimer(true)}
                 onMouseLeave={() => setShowDisclaimer(false)}
+                onClick={() => setShowDisclaimer(!showDisclaimer)}
               >
                 <span className="dropdown-toggle">{t('header.disclaimer')}</span>
                 {showDisclaimer && (
@@ -108,21 +137,21 @@ const Header = () => {
                     <li className="has-submenu">
                       <span>{t('disclaimerMenu.investorCharter')}</span>
                       <ul className="submenu">
-                        <li><Link to="/annexure-a">{t('disclaimerMenu.annexureA')}</Link></li>
-                        <li><Link to="/annexure-b">{t('disclaimerMenu.annexureB')}</Link></li>
+                        <li><Link to="/annexure-a" onClick={closeMobileMenu}>{t('disclaimerMenu.annexureA')}</Link></li>
+                        <li><Link to="/annexure-b" onClick={closeMobileMenu}>{t('disclaimerMenu.annexureB')}</Link></li>
                       </ul>
                     </li>
-                    <li><Link to="/control-policy">{t('disclaimerMenu.controlPolicy')}</Link></li>
-                    <li><Link to="/privacy-policy">{t('disclaimerMenu.privacyPolicy')}</Link></li>
-                    <li><Link to="/code-of-conduct">{t('disclaimerMenu.codeOfConduct')}</Link></li>
-                    <li><Link to="/grievance-redressal">{t('disclaimerMenu.grievanceRedressal')}</Link></li>
-                    <li><Link to="/terms-conditions">{t('disclaimerMenu.termsConditions')}</Link></li>
-                    <li><Link to="/all-disclaimers">{t('disclaimerMenu.allDisclaimers')}</Link></li>
+                    <li><Link to="/control-policy" onClick={closeMobileMenu}>{t('disclaimerMenu.controlPolicy')}</Link></li>
+                    <li><Link to="/privacy-policy" onClick={closeMobileMenu}>{t('disclaimerMenu.privacyPolicy')}</Link></li>
+                    <li><Link to="/code-of-conduct" onClick={closeMobileMenu}>{t('disclaimerMenu.codeOfConduct')}</Link></li>
+                    <li><Link to="/grievance-redressal" onClick={closeMobileMenu}>{t('disclaimerMenu.grievanceRedressal')}</Link></li>
+                    <li><Link to="/terms-conditions" onClick={closeMobileMenu}>{t('disclaimerMenu.termsConditions')}</Link></li>
+                    <li><Link to="/all-disclaimers" onClick={closeMobileMenu}>{t('disclaimerMenu.allDisclaimers')}</Link></li>
                   </ul>
                 )}
               </li>
-              <li><Link to="/contact">{t('header.contact')}</Link></li>
-              <li><Link to="/faq">{t('header.faq')}</Link></li>
+              <li><Link to="/contact" onClick={closeMobileMenu}>{t('header.contact')}</Link></li>
+              <li><Link to="/faq" onClick={closeMobileMenu}>{t('header.faq')}</Link></li>
             </ul>
           </nav>
         </div>

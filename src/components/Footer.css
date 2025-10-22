@@ -1,5 +1,5 @@
 .footer {
-  background: #1a1a1a;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: #ffffff;
   padding: 60px 0 30px;
   margin-top: 80px;
@@ -51,11 +51,11 @@
 
 .social-links a:hover,
 .legal-links a:hover {
-  color: #007bff;
+  color: #ffffff;
 }
 
 .footer-bottom {
-  border-top: 1px solid #333;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   padding-top: 30px;
   text-align: center;
 }

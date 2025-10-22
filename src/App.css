@@ -134,6 +134,40 @@ body.theme-dark {
   color: #ffffff !important;
 }
 
+/* Ensure ALL text elements are white in dark theme */
+body.theme-dark * {
+  color: #ffffff !important;
+}
+
+/* Override specific elements that need different colors */
+body.theme-dark .header-brand-name,
+body.theme-dark .logo h1 {
+  color: #ffffff !important;
+}
+
+body.theme-dark .main-nav a,
+body.theme-dark .dropdown-toggle,
+body.theme-dark .header-accessibility button {
+  color: #ecf0f1 !important;
+}
+
+body.theme-dark .dropdown-menu a {
+  color: #ecf0f1 !important;
+}
+
+body.theme-dark .dropdown-menu a:hover {
+  color: #ffffff !important;
+}
+
+body.theme-dark .about-content,
+body.theme-dark .contact-info,
+body.theme-dark .contact-form-container,
+body.theme-dark .faq-item,
+body.theme-dark .disclaimer-content,
+body.theme-dark .disclaimer-section {
+  color: #ecf0f1 !important;
+}
+
 body.theme-dark .header {
   background: #2c3e50 !important;
   color: #ffffff !important;
@@ -194,6 +228,250 @@ body.theme-dark .home,
 body.theme-dark .hero-section {
   background: #1a1a1a !important;
   color: #ffffff !important;
+}
+
+/* Ensure hero section text remains white in dark theme */
+body.theme-dark .hero-section h1,
+body.theme-dark .hero-section p,
+body.theme-dark .hero-section .hero-title,
+body.theme-dark .hero-section .hero-subtitle {
+  color: #ffffff !important;
+}
+
+/* Ensure CTA button remains visible in dark theme */
+body.theme-dark .hero-section .cta-button {
+  background: #ffffff !important;
+  color: #667eea !important;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3) !important;
+}
+
+body.theme-dark .hero-section .cta-button:hover {
+  background: #f8f9fa !important;
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Ensure other sections have proper contrast in dark theme */
+body.theme-dark .transform-section h2,
+body.theme-dark .transform-section p,
+body.theme-dark .newsletter-section h2,
+body.theme-dark .newsletter-section p,
+body.theme-dark .newsletter-description {
+  color: #ffffff !important;
+}
+
+body.theme-dark .transform-section {
+  background: #2c3e50 !important;
+}
+
+body.theme-dark .newsletter-section {
+  background: #34495e !important;
+}
+
+body.theme-dark .newsletter-input {
+  background: #2c3e50 !important;
+  color: #ffffff !important;
+  border-color: #4a5f7f !important;
+}
+
+body.theme-dark .newsletter-input:focus {
+  border-color: #667eea !important;
+}
+
+body.theme-dark .newsletter-button {
+  background: #667eea !important;
+  color: #ffffff !important;
+}
+
+/* Ensure all form elements have proper styling in dark theme */
+body.theme-dark input,
+body.theme-dark textarea,
+body.theme-dark select {
+  background: #2c3e50 !important;
+  color: #ffffff !important;
+  border-color: #4a5f7f !important;
+}
+
+body.theme-dark input:focus,
+body.theme-dark textarea:focus,
+body.theme-dark select:focus {
+  border-color: #667eea !important;
+  outline-color: #667eea !important;
+}
+
+body.theme-dark input::placeholder,
+body.theme-dark textarea::placeholder {
+  color: #bdc3c7 !important;
+}
+
+/* Ensure all buttons have proper contrast */
+body.theme-dark button {
+  color: #ffffff !important;
+}
+
+body.theme-dark .cta-button,
+body.theme-dark .newsletter-button,
+body.theme-dark .submit-button {
+  background: #667eea !important;
+  color: #ffffff !important;
+}
+
+/* Ensure links are visible */
+body.theme-dark a {
+  color: #667eea !important;
+}
+
+body.theme-dark a:hover {
+  color: #8a9eff !important;
+}
+
+/* Ensure footer and other components are properly styled */
+body.theme-dark .footer {
+  background: #2c3e50 !important;
+  color: #ffffff !important;
+}
+
+body.theme-dark .footer a {
+  color: #667eea !important;
+}
+
+body.theme-dark .footer a:hover {
+  color: #8a9eff !important;
+}
+
+/* Ensure all headings are white */
+body.theme-dark h1,
+body.theme-dark h2,
+body.theme-dark h3,
+body.theme-dark h4,
+body.theme-dark h5,
+body.theme-dark h6 {
+  color: #ffffff !important;
+}
+
+/* Ensure all paragraphs and text elements are white */
+body.theme-dark p,
+body.theme-dark span,
+body.theme-dark div,
+body.theme-dark li,
+body.theme-dark td,
+body.theme-dark th {
+  color: #ffffff !important;
+}
+
+/* About page dark theme styling */
+body.theme-dark .about-page {
+  background: #1a1a1a !important;
+  color: #ffffff !important;
+}
+
+body.theme-dark .about-main-title {
+  color: #ffffff !important;
+}
+
+body.theme-dark .about-hero-content {
+  background: #2c3e50 !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 12px rgba(255, 255, 255, 0.1) !important;
+}
+
+body.theme-dark .about-intro {
+  color: #ecf0f1 !important;
+}
+
+body.theme-dark .about-profile-card {
+  background: #2c3e50 !important;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1) !important;
+}
+
+body.theme-dark .profile-info {
+  background: #2c3e50 !important;
+}
+
+body.theme-dark .profile-info h3 {
+  color: #ffffff !important;
+}
+
+body.theme-dark .sebi-info {
+  color: #bdc3c7 !important;
+}
+
+body.theme-dark .about-content {
+  background: #2c3e50 !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 12px rgba(255, 255, 255, 0.1) !important;
+}
+
+body.theme-dark .about-section h2 {
+  color: #ffffff !important;
+}
+
+body.theme-dark .about-section p {
+  color: #ecf0f1 !important;
+}
+
+body.theme-dark .about-section li {
+  color: #ecf0f1 !important;
+}
+
+body.theme-dark .registration-info {
+  background: #34495e !important;
+  border-left-color: #667eea !important;
+}
+
+body.theme-dark .registration-info h2 {
+  color: #ffffff !important;
+}
+
+body.theme-dark .registration-info p {
+  color: #ecf0f1 !important;
+}
+
+/* Contact page dark theme styling */
+body.theme-dark .contact-page {
+  background: #1a1a1a !important;
+  color: #ffffff !important;
+}
+
+body.theme-dark .contact-info {
+  background: #2c3e50 !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 12px rgba(255, 255, 255, 0.1) !important;
+}
+
+body.theme-dark .contact-form-container {
+  background: #2c3e50 !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 12px rgba(255, 255, 255, 0.1) !important;
+}
+
+/* FAQ page dark theme styling */
+body.theme-dark .faq-page {
+  background: #1a1a1a !important;
+  color: #ffffff !important;
+}
+
+body.theme-dark .faq-item {
+  background: #2c3e50 !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 12px rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Disclaimer pages dark theme styling */
+body.theme-dark .disclaimer-page {
+  background: #1a1a1a !important;
+  color: #ffffff !important;
+}
+
+body.theme-dark .disclaimer-content {
+  background: #2c3e50 !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 12px rgba(255, 255, 255, 0.1) !important;
+}
+
+body.theme-dark .disclaimer-section {
+  background: #2c3e50 !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 12px rgba(255, 255, 255, 0.1) !important;
 }
 
 body.theme-blue {
