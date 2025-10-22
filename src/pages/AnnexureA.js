@@ -1,61 +1,73 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 import './Disclaimer.css';
 
 const AnnexureA = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="disclaimer-page">
       <div className="page-container">
-        <h1>Annexure – A</h1>
+        <h1>{t('annexureA.title')}</h1>
+        <p className="subtitle">{t('annexureA.subtitle')}</p>
+        
         <div className="disclaimer-content">
           <section className="disclaimer-section">
-            <h2>Details of Grievance Redressal Mechanism</h2>
-            <p>
-              This annexure provides detailed information about our grievance redressal
-              mechanism and the process for resolving investor complaints.
-            </p>
+            <h2>{t('annexureA.visionMission')}</h2>
+            <p><strong>{t('annexureA.visionLabel')}</strong> {t('annexureA.vision')}</p>
+            <p><strong>{t('annexureA.missionLabel')}</strong> {t('annexureA.mission')}</p>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Grievance Officer Details</h2>
-            <p><strong>Name:</strong> Sankalp Chaturvedi</p>
-            <p><strong>Designation:</strong> Chief Grievance Officer</p>
-            <p><strong>Address:</strong> 123 Financial District, Mumbai, Maharashtra 400001</p>
-            <p><strong>Response Time:</strong> Within 7 working days</p>
-          </section>
-
-          <section className="disclaimer-section">
-            <h2>Complaint Filing Process</h2>
-            <ol>
-              <li>Submit your complaint through our contact form or email</li>
-              <li>Receive acknowledgment within 2 working days</li>
-              <li>Investigation of the complaint</li>
-              <li>Resolution communication within 7 working days</li>
-              <li>Escalation to SEBI SCORES if unresolved</li>
-            </ol>
-          </section>
-
-          <section className="disclaimer-section">
-            <h2>Types of Complaints Handled</h2>
+            <h2>{t('annexureA.businessDetails')}</h2>
             <ul>
-              <li>Service quality issues</li>
-              <li>Billing and payment concerns</li>
-              <li>Unauthorized transactions or recommendations</li>
-              <li>Delay in service delivery</li>
-              <li>Breach of confidentiality</li>
-              <li>Any other grievances related to our services</li>
+              <li>{t('annexureA.business1')}</li>
+              <li>{t('annexureA.business2')}</li>
+              <li>{t('annexureA.business3')}</li>
+              <li>{t('annexureA.business4')}</li>
+              <li>{t('annexureA.business5')}</li>
             </ul>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Escalation Matrix</h2>
-            <p>
-              If your complaint is not resolved within the stipulated time frame, you may
-              escalate your complaint to:
-            </p>
+            <h2>{t('annexureA.servicesTitle')}</h2>
             <ul>
-              <li><strong>Level 1:</strong> Grievance Officer (within 7 days)</li>
-              <li><strong>Level 2:</strong> Senior Management (within 15 days)</li>
-              <li><strong>Level 3:</strong> SEBI SCORES Platform</li>
+              <li>{t('annexureA.service1')}</li>
+              <li>{t('annexureA.service2')}</li>
+              <li>{t('annexureA.service3')}</li>
+              <li>{t('annexureA.service4')}</li>
+            </ul>
+          </section>
+
+          <section className="disclaimer-section">
+            <h2>{t('annexureA.grievanceTitle')}</h2>
+            <p>{t('annexureA.grievanceText1')}</p>
+            <p>{t('annexureA.grievanceText2')}</p>
+            <p>{t('annexureA.grievanceText3')}</p>
+          </section>
+
+          <section className="disclaimer-section">
+            <h2>{t('annexureA.expectationsTitle')}</h2>
+            
+            <h3>{t('annexureA.dosTitle')}</h3>
+            <ul>
+              <li>{t('annexureA.do1')}</li>
+              <li>{t('annexureA.do2')}</li>
+              <li>{t('annexureA.do3')}</li>
+              <li>{t('annexureA.do4')}</li>
+              <li>{t('annexureA.do5')}</li>
+              <li>{t('annexureA.do6')}</li>
+              <li>{t('annexureA.do7')}</li>
+              <li>{t('annexureA.do8')}</li>
+              <li>{t('annexureA.do9')}</li>
+            </ul>
+
+            <h3>{t('annexureA.dontsTitle')}</h3>
+            <ul>
+              <li>{t('annexureA.dont1')}</li>
+              <li>{t('annexureA.dont2')}</li>
+              <li>{t('annexureA.dont3')}</li>
+              <li>{t('annexureA.dont4')}</li>
             </ul>
           </section>
         </div>
@@ -65,4 +77,5 @@ const AnnexureA = () => {
 };
 
 export default AnnexureA;
+
 

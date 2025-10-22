@@ -1,169 +1,134 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 import './Disclaimer.css';
 
 const TermsConditions = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="disclaimer-page">
       <div className="page-container">
-        <h1>Terms and Conditions</h1>
+        <h1>{t('terms.title')}</h1>
         <div className="disclaimer-content">
           <section className="disclaimer-section">
-            <h2>Agreement to Terms</h2>
-            <p>
-              By accessing and using the services provided by Learn With Sankalp, you agree
-              to be bound by these Terms and Conditions. If you do not agree with any part
-              of these terms, please do not use our services.
-            </p>
+            <h2>{t('terms.agreement')}</h2>
+            <p>{t('terms.agreementText')}</p>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Services Provided</h2>
-            <p>
-              Learn With Sankalp provides investment advisory services, market analysis,
-              financial education, and related services as registered with SEBI
-              (Reg. No: INH000014119).
-            </p>
+            <h2>{t('terms.services')}</h2>
+            <p>{t('terms.servicesText')}</p>
           </section>
 
           <section className="disclaimer-section">
-            <h2>User Obligations</h2>
+            <h2>{t('terms.userObligations')}</h2>
             <ul>
-              <li>Provide accurate and complete information for registration and KYC</li>
-              <li>Maintain confidentiality of login credentials</li>
-              <li>Use services only for lawful purposes</li>
-              <li>Not share or redistribute our proprietary content</li>
-              <li>Inform us of any changes to your personal information</li>
-              <li>Comply with all applicable laws and regulations</li>
+              <li>{t('terms.obligation1')}</li>
+              <li>{t('terms.obligation2')}</li>
+              <li>{t('terms.obligation3')}</li>
+              <li>{t('terms.obligation4')}</li>
+              <li>{t('terms.obligation5')}</li>
+              <li>{t('terms.obligation6')}</li>
             </ul>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Investment Risks</h2>
-            <p>
-              You acknowledge that:
-            </p>
+            <h2>{t('terms.investmentRisks')}</h2>
+            <p>{t('terms.riskText')}</p>
             <ul>
-              <li>All investments in securities markets are subject to market risks</li>
-              <li>Past performance does not guarantee future results</li>
-              <li>You should read all documents carefully before investing</li>
-              <li>We do not guarantee profits or protect against losses</li>
-              <li>Investment decisions are ultimately your responsibility</li>
+              <li>{t('terms.risk1')}</li>
+              <li>{t('terms.risk2')}</li>
+              <li>{t('terms.risk3')}</li>
+              <li>{t('terms.risk4')}</li>
+              <li>{t('terms.risk5')}</li>
             </ul>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Fees and Payments</h2>
+            <h2>{t('terms.fees')}</h2>
             <ul>
-              <li>Service fees are as communicated and agreed upon</li>
-              <li>Fees are subject to applicable taxes</li>
-              <li>Payment terms are specified in service agreements</li>
-              <li>Late payments may result in service suspension</li>
-              <li>Refund policy as per service agreement</li>
+              <li>{t('terms.fee1')}</li>
+              <li>{t('terms.fee2')}</li>
+              <li>{t('terms.fee3')}</li>
+              <li>{t('terms.fee4')}</li>
+              <li>{t('terms.fee5')}</li>
             </ul>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Intellectual Property</h2>
-            <p>
-              All content, including research reports, analysis, educational materials,
-              logos, and trademarks are the property of Learn With Sankalp. You may not:
-            </p>
+            <h2>{t('terms.intellectual')}</h2>
+            <p>{t('terms.intellectualText')}</p>
             <ul>
-              <li>Reproduce or distribute our content without permission</li>
-              <li>Use our intellectual property for commercial purposes</li>
-              <li>Modify or create derivative works</li>
-              <li>Remove copyright or proprietary notices</li>
+              <li>{t('terms.ip1')}</li>
+              <li>{t('terms.ip2')}</li>
+              <li>{t('terms.ip3')}</li>
+              <li>{t('terms.ip4')}</li>
             </ul>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Limitation of Liability</h2>
-            <p>
-              To the maximum extent permitted by law:
-            </p>
+            <h2>{t('terms.limitation')}</h2>
+            <p>{t('terms.limitationText')}</p>
             <ul>
-              <li>We are not liable for investment losses or missed opportunities</li>
-              <li>Our liability is limited to the fees paid for our services</li>
-              <li>We are not responsible for technical issues or service interruptions</li>
-              <li>We are not liable for actions taken based on third-party information</li>
+              <li>{t('terms.limit1')}</li>
+              <li>{t('terms.limit2')}</li>
+              <li>{t('terms.limit3')}</li>
+              <li>{t('terms.limit4')}</li>
             </ul>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Disclaimer of Warranties</h2>
-            <p>
-              Our services are provided "as is" without warranties of any kind, express or
-              implied. We do not warrant that:
-            </p>
+            <h2>{t('terms.disclaimer')}</h2>
+            <p>{t('terms.disclaimerText')}</p>
             <ul>
-              <li>Services will be uninterrupted or error-free</li>
-              <li>Results will meet your expectations</li>
-              <li>Information is always accurate or complete</li>
-              <li>Defects will be corrected immediately</li>
+              <li>{t('terms.warranty1')}</li>
+              <li>{t('terms.warranty2')}</li>
+              <li>{t('terms.warranty3')}</li>
+              <li>{t('terms.warranty4')}</li>
             </ul>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Termination</h2>
-            <p>
-              Either party may terminate the service agreement:
-            </p>
+            <h2>{t('terms.termination')}</h2>
+            <p>{t('terms.terminationText')}</p>
             <ul>
-              <li>With written notice as per agreement terms</li>
-              <li>Immediately for breach of terms</li>
-              <li>For regulatory or legal reasons</li>
+              <li>{t('terms.term1')}</li>
+              <li>{t('terms.term2')}</li>
+              <li>{t('terms.term3')}</li>
             </ul>
-            <p>
-              Upon termination, you must cease using our services and may lose access to
-              proprietary content.
-            </p>
+            <p>{t('terms.terminationNote')}</p>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Confidentiality</h2>
-            <p>
-              Both parties agree to maintain confidentiality of:
-            </p>
+            <h2>{t('terms.confidentiality')}</h2>
+            <p>{t('terms.confidentialityText')}</p>
             <ul>
-              <li>Personal and financial information</li>
-              <li>Proprietary research and analysis</li>
-              <li>Trade secrets and business information</li>
-              <li>Client lists and transactions</li>
+              <li>{t('terms.conf1')}</li>
+              <li>{t('terms.conf2')}</li>
+              <li>{t('terms.conf3')}</li>
+              <li>{t('terms.conf4')}</li>
             </ul>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Governing Law and Jurisdiction</h2>
-            <p>
-              These terms are governed by the laws of India. Any disputes shall be subject
-              to the exclusive jurisdiction of courts in Mumbai, Maharashtra.
-            </p>
+            <h2>{t('terms.governing')}</h2>
+            <p>{t('terms.governingText')}</p>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Amendments</h2>
-            <p>
-              We reserve the right to modify these terms at any time. Continued use of our
-              services after changes constitutes acceptance of modified terms. We will
-              notify users of material changes.
-            </p>
+            <h2>{t('terms.amendments')}</h2>
+            <p>{t('terms.amendmentsText')}</p>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Severability</h2>
-            <p>
-              If any provision of these terms is found to be invalid or unenforceable, the
-              remaining provisions shall continue in full force and effect.
-            </p>
+            <h2>{t('terms.severability')}</h2>
+            <p>{t('terms.severabilityText')}</p>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Contact Information</h2>
-            <p>
-              For questions about these Terms and Conditions, please contact us through
-              our Contact page.
-            </p>
-            <p><strong>Last Updated:</strong> October 19, 2025</p>
+            <h2>{t('terms.contactInfo')}</h2>
+            <p>{t('terms.contactInfoText')}</p>
+            <p><strong>{t('terms.lastUpdated')}</strong> {t('terms.updateDate')}</p>
           </section>
         </div>
       </div>
@@ -172,4 +137,3 @@ const TermsConditions = () => {
 };
 
 export default TermsConditions;
-

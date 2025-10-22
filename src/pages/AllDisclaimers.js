@@ -1,139 +1,109 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
 import './Disclaimer.css';
 
 const AllDisclaimers = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="disclaimer-page">
       <div className="page-container">
-        <h1>All Disclaimers</h1>
+        <h1>{t('allDisclaimers.title')}</h1>
         <div className="disclaimer-content">
           <section className="disclaimer-section">
-            <h2>General Disclaimer</h2>
-            <p>
-              The information provided by Learn With Sankalp is for educational and
-              informational purposes only. It should not be considered as investment advice,
-              legal advice, or a recommendation to buy or sell any securities.
-            </p>
+            <h2>{t('allDisclaimers.general')}</h2>
+            <p>{t('allDisclaimers.generalText')}</p>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Investment Risk Disclaimer</h2>
-            <p>
-              <strong>Investments in securities market are subject to market risks. Read all
-              the related documents carefully before investing.</strong>
-            </p>
+            <h2>{t('allDisclaimers.investmentRisk')}</h2>
+            <p><strong>{t('allDisclaimers.investmentRiskBold')}</strong></p>
             <ul>
-              <li>Past performance is not indicative of future results</li>
-              <li>Market conditions can change rapidly and unpredictably</li>
-              <li>You may lose your entire investment</li>
-              <li>Different investment products have different risk profiles</li>
-              <li>Diversification does not guarantee profits or protect against losses</li>
+              <li>{t('allDisclaimers.ir1')}</li>
+              <li>{t('allDisclaimers.ir2')}</li>
+              <li>{t('allDisclaimers.ir3')}</li>
+              <li>{t('allDisclaimers.ir4')}</li>
+              <li>{t('allDisclaimers.ir5')}</li>
             </ul>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Registration Disclaimer</h2>
-            <p>
-              Learn With Sankalp is registered with SEBI as an Investment Advisor with
-              registration number INH000014119. SEBI registration does not imply approval
-              or endorsement by SEBI nor does it guarantee the performance of our services.
-            </p>
+            <h2>{t('allDisclaimers.registration')}</h2>
+            <p>{t('allDisclaimers.registrationText')}</p>
           </section>
 
           <section className="disclaimer-section">
-            <h2>No Guarantee Disclaimer</h2>
-            <p>
-              We do not guarantee:
-            </p>
+            <h2>{t('allDisclaimers.noGuarantee')}</h2>
+            <p>{t('allDisclaimers.noGuaranteeText')}</p>
             <ul>
-              <li>Profits or returns on any investment</li>
-              <li>Accuracy of market predictions or forecasts</li>
-              <li>That our advice will result in successful outcomes</li>
-              <li>Protection against investment losses</li>
-              <li>Specific investment performance</li>
+              <li>{t('allDisclaimers.ng1')}</li>
+              <li>{t('allDisclaimers.ng2')}</li>
+              <li>{t('allDisclaimers.ng3')}</li>
+              <li>{t('allDisclaimers.ng4')}</li>
+              <li>{t('allDisclaimers.ng5')}</li>
             </ul>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Third-Party Information Disclaimer</h2>
-            <p>
-              Our analysis may include information from third-party sources. While we
-              strive to use reliable sources, we do not guarantee the accuracy, completeness,
-              or timeliness of third-party information.
-            </p>
+            <h2>{t('allDisclaimers.thirdParty')}</h2>
+            <p>{t('allDisclaimers.thirdPartyText')}</p>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Personal Responsibility Disclaimer</h2>
-            <p>
-              Investment decisions are your personal responsibility. You should:
-            </p>
+            <h2>{t('allDisclaimers.personal')}</h2>
+            <p>{t('allDisclaimers.personalText')}</p>
             <ul>
-              <li>Conduct your own due diligence</li>
-              <li>Consider your financial situation and risk tolerance</li>
-              <li>Consult with other professionals as needed</li>
-              <li>Not rely solely on our recommendations</li>
-              <li>Make informed decisions based on complete information</li>
+              <li>{t('allDisclaimers.pr1')}</li>
+              <li>{t('allDisclaimers.pr2')}</li>
+              <li>{t('allDisclaimers.pr3')}</li>
+              <li>{t('allDisclaimers.pr4')}</li>
+              <li>{t('allDisclaimers.pr5')}</li>
             </ul>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Communication Disclaimer</h2>
-            <p>
-              Communications from us, including emails, newsletters, and reports:
-            </p>
+            <h2>{t('allDisclaimers.communication')}</h2>
+            <p>{t('allDisclaimers.communicationText')}</p>
             <ul>
-              <li>Are confidential and intended only for the recipient</li>
-              <li>Should not be shared or redistributed without permission</li>
-              <li>May contain forward-looking statements subject to risks and uncertainties</li>
-              <li>Are not a substitute for professional advice</li>
+              <li>{t('allDisclaimers.comm1')}</li>
+              <li>{t('allDisclaimers.comm2')}</li>
+              <li>{t('allDisclaimers.comm3')}</li>
+              <li>{t('allDisclaimers.comm4')}</li>
             </ul>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Website Disclaimer</h2>
-            <p>
-              Regarding our website:
-            </p>
+            <h2>{t('allDisclaimers.website')}</h2>
+            <p>{t('allDisclaimers.websiteText')}</p>
             <ul>
-              <li>Content is provided "as is" without warranties</li>
-              <li>We are not responsible for technical issues or interruptions</li>
-              <li>Links to third-party websites are provided for convenience only</li>
-              <li>We do not endorse third-party content or services</li>
-              <li>Information may be updated without notice</li>
+              <li>{t('allDisclaimers.web1')}</li>
+              <li>{t('allDisclaimers.web2')}</li>
+              <li>{t('allDisclaimers.web3')}</li>
+              <li>{t('allDisclaimers.web4')}</li>
+              <li>{t('allDisclaimers.web5')}</li>
             </ul>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Conflict of Interest Disclaimer</h2>
-            <p>
-              We maintain policies to manage conflicts of interest. However, potential
-              conflicts may exist, and we will disclose material conflicts as required by
-              regulations.
-            </p>
+            <h2>{t('allDisclaimers.conflict')}</h2>
+            <p>{t('allDisclaimers.conflictText')}</p>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Regulatory Compliance</h2>
-            <p>
-              We comply with all applicable SEBI regulations and guidelines. For complete
-              regulatory information, please refer to:
-            </p>
+            <h2>{t('allDisclaimers.regulatory')}</h2>
+            <p>{t('allDisclaimers.regulatoryText')}</p>
             <ul>
-              <li><Link to="/investor-charter">Investor Charter</Link></li>
-              <li><Link to="/code-of-conduct">Code of Conduct</Link></li>
-              <li><Link to="/control-policy">Control Policy</Link></li>
-              <li><Link to="/grievance-redressal">Grievance Redressal</Link></li>
+              <li><Link to="/investor-charter">{t('disclaimerMenu.investorCharter')}</Link></li>
+              <li><Link to="/code-of-conduct">{t('disclaimerMenu.codeOfConduct')}</Link></li>
+              <li><Link to="/control-policy">{t('disclaimerMenu.controlPolicy')}</Link></li>
+              <li><Link to="/grievance-redressal">{t('disclaimerMenu.grievanceRedressal')}</Link></li>
             </ul>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Contact for Clarifications</h2>
-            <p>
-              If you have any questions about these disclaimers or need clarification,
-              please <Link to="/contact">contact us</Link>.
-            </p>
+            <h2>{t('allDisclaimers.contactTitle')}</h2>
+            <p>{t('allDisclaimers.contactText')}<Link to="/contact">{t('allDisclaimers.contactLink')}</Link>.</p>
           </section>
         </div>
       </div>
@@ -142,4 +112,3 @@ const AllDisclaimers = () => {
 };
 
 export default AllDisclaimers;
-

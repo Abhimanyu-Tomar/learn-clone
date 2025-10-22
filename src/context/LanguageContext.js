@@ -13,28 +13,31 @@ export const useLanguage = () => {
 };
 
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState('en');
-  const [fontSize, setFontSize] = useState('medium'); // small, medium, large
-  const [theme, setTheme] = useState('default'); // default, dark, blue, beige, highContrast
+  // Check for saved language preference
+  const savedLanguage = localStorage.getItem('selectedLanguage');
+  const savedFontSize = localStorage.getItem('fontSize') || 'medium';
+  const savedTheme = localStorage.getItem('theme') || 'default';
+  
+  const [language, setLanguage] = useState(savedLanguage || 'en');
+  const [fontSize, setFontSize] = useState(savedFontSize); // small, medium, large
+  const [theme, setTheme] = useState(savedTheme); // default, dark, blue, beige, highContrast
 
   useEffect(() => {
-    // Apply font size to root element
-    const root = document.documentElement;
-    switch (fontSize) {
-      case 'small':
-        root.style.fontSize = '14px';
-        break;
-      case 'large':
-        root.style.fontSize = '18px';
-        break;
-      default:
-        root.style.fontSize = '16px';
+    // Apply font size class to body element
+    document.body.classList.remove('font-small', 'font-large');
+    if (fontSize === 'small') {
+      document.body.classList.add('font-small');
+    } else if (fontSize === 'large') {
+      document.body.classList.add('font-large');
     }
+    localStorage.setItem('fontSize', fontSize);
   }, [fontSize]);
 
   useEffect(() => {
     // Apply theme to body element
-    document.body.className = `theme-${theme}`;
+    document.body.classList.remove('theme-default', 'theme-dark', 'theme-blue', 'theme-beige');
+    document.body.classList.add(`theme-${theme}`);
+    localStorage.setItem('theme', theme);
   }, [theme]);
 
   const t = (key) => {
@@ -54,6 +57,7 @@ export const LanguageProvider = ({ children }) => {
 
   const changeLanguage = (lang) => {
     setLanguage(lang);
+    localStorage.setItem('selectedLanguage', lang);
   };
 
   const increaseFontSize = () => {

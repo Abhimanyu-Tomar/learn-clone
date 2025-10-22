@@ -1,99 +1,80 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 import './Disclaimer.css';
 
 const CodeOfConduct = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="disclaimer-page">
       <div className="page-container">
-        <h1>Code of Conduct</h1>
+        <h1>{t('codeOfConduct.title')}</h1>
         <div className="disclaimer-content">
           <section className="disclaimer-section">
-            <h2>Professional Standards</h2>
-            <p>
-              Learn With Sankalp is committed to maintaining the highest standards of
-              professional conduct in all our interactions with clients, regulators, and
-              other stakeholders.
-            </p>
+            <h2>{t('codeOfConduct.standards')}</h2>
+            <p>{t('codeOfConduct.standardsText')}</p>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Ethical Principles</h2>
-            <h3>Integrity</h3>
-            <p>
-              We conduct our business with honesty, transparency, and fairness. We do not
-              engage in any fraudulent, deceptive, or manipulative practices.
-            </p>
-            <h3>Competence</h3>
-            <p>
-              We maintain and continuously improve our professional knowledge and skills
-              to provide quality services to our clients.
-            </p>
-            <h3>Confidentiality</h3>
-            <p>
-              We protect the confidentiality of client information and do not disclose it
-              without proper authorization, except as required by law.
-            </p>
-            <h3>Objectivity</h3>
-            <p>
-              We provide unbiased advice and avoid conflicts of interest that could
-              compromise our professional judgment.
-            </p>
+            <h2>{t('codeOfConduct.ethical')}</h2>
+            <h3>{t('codeOfConduct.integrity')}</h3>
+            <p>{t('codeOfConduct.integrityText')}</p>
+            <h3>{t('codeOfConduct.competence')}</h3>
+            <p>{t('codeOfConduct.competenceText')}</p>
+            <h3>{t('codeOfConduct.confidentiality')}</h3>
+            <p>{t('codeOfConduct.confidentialityText')}</p>
+            <h3>{t('codeOfConduct.objectivity')}</h3>
+            <p>{t('codeOfConduct.objectivityText')}</p>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Client Relations</h2>
+            <h2>{t('codeOfConduct.clientRelations')}</h2>
             <ul>
-              <li>Treat all clients fairly and with respect</li>
-              <li>Provide clear and accurate information about our services</li>
-              <li>Disclose all relevant risks associated with investments</li>
-              <li>Act in the best interests of clients</li>
-              <li>Maintain professional boundaries</li>
-              <li>Respond promptly to client queries and concerns</li>
+              <li>{t('codeOfConduct.rel1')}</li>
+              <li>{t('codeOfConduct.rel2')}</li>
+              <li>{t('codeOfConduct.rel3')}</li>
+              <li>{t('codeOfConduct.rel4')}</li>
+              <li>{t('codeOfConduct.rel5')}</li>
+              <li>{t('codeOfConduct.rel6')}</li>
             </ul>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Conflict of Interest</h2>
-            <p>
-              We have policies and procedures to identify and manage conflicts of interest:
-            </p>
+            <h2>{t('codeOfConduct.conflict')}</h2>
+            <p>{t('codeOfConduct.conflictText')}</p>
             <ul>
-              <li>Disclosure of potential conflicts to clients</li>
-              <li>Maintaining independence in advisory services</li>
-              <li>Avoiding personal trading that conflicts with client interests</li>
-              <li>Transparent fee structure and commission disclosure</li>
+              <li>{t('codeOfConduct.conflict1')}</li>
+              <li>{t('codeOfConduct.conflict2')}</li>
+              <li>{t('codeOfConduct.conflict3')}</li>
+              <li>{t('codeOfConduct.conflict4')}</li>
             </ul>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Regulatory Compliance</h2>
+            <h2>{t('codeOfConduct.regulatory')}</h2>
             <ul>
-              <li>Comply with all applicable laws and regulations</li>
-              <li>Adhere to SEBI guidelines and circulars</li>
-              <li>Maintain proper records and documentation</li>
-              <li>Cooperate with regulatory inspections and audits</li>
-              <li>Report suspicious activities and market abuse</li>
+              <li>{t('codeOfConduct.reg1')}</li>
+              <li>{t('codeOfConduct.reg2')}</li>
+              <li>{t('codeOfConduct.reg3')}</li>
+              <li>{t('codeOfConduct.reg4')}</li>
+              <li>{t('codeOfConduct.reg5')}</li>
             </ul>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Professional Behavior</h2>
+            <h2>{t('codeOfConduct.behavior')}</h2>
             <ul>
-              <li>Maintain dignity and decorum in professional conduct</li>
-              <li>Avoid behavior that could damage the reputation of the profession</li>
-              <li>Respect intellectual property rights</li>
-              <li>Ensure fair and accurate marketing and advertising</li>
-              <li>Avoid making unrealistic promises or guarantees</li>
+              <li>{t('codeOfConduct.behave1')}</li>
+              <li>{t('codeOfConduct.behave2')}</li>
+              <li>{t('codeOfConduct.behave3')}</li>
+              <li>{t('codeOfConduct.behave4')}</li>
+              <li>{t('codeOfConduct.behave5')}</li>
             </ul>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Continuous Improvement</h2>
-            <p>
-              We are committed to continuous learning and improvement. We regularly review
-              our practices, update our knowledge, and enhance our systems to better serve
-              our clients and maintain professional excellence.
-            </p>
+            <h2>{t('codeOfConduct.improvement')}</h2>
+            <p>{t('codeOfConduct.improvementText')}</p>
           </section>
         </div>
       </div>
@@ -102,4 +83,3 @@ const CodeOfConduct = () => {
 };
 
 export default CodeOfConduct;
-

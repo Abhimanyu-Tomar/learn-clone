@@ -4,16 +4,97 @@
 }
 
 .page-container {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.about-page h1 {
+.about-main-title {
   font-size: 48px;
   margin-bottom: 40px;
   color: #1a1a1a;
   font-weight: 700;
   text-align: center;
+}
+
+.about-hero {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 40px;
+  margin-bottom: 60px;
+  align-items: start;
+}
+
+.about-hero-content {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.about-intro {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #495057;
+  margin: 0;
+}
+
+.about-profile-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  position: sticky;
+  top: 100px;
+}
+
+.profile-image-container {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.profile-placeholder-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.profile-initials {
+  font-size: 120px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-info {
+  padding: 24px;
+  text-align: center;
+  background: white;
+}
+
+.profile-info h3 {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+.sebi-info {
+  font-size: 14px;
+  color: #6c757d;
+  margin: 0;
+  font-weight: 500;
 }
 
 .about-content {
@@ -63,11 +144,116 @@
   border-left: 4px solid #667eea;
 }
 
+.about-newsletter-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 80px 20px;
+  margin-top: 60px;
+  margin-left: -20px;
+  margin-right: -20px;
+  width: calc(100% + 40px);
+}
+
+.about-newsletter-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-newsletter-container h2 {
+  font-size: 42px;
+  margin-bottom: 16px;
+  font-weight: 700;
+  color: white;
+}
+
+.about-newsletter-container > p {
+  font-size: 20px;
+  margin-bottom: 48px;
+  opacity: 0.95;
+}
+
+.about-newsletter-form-wrapper {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.about-newsletter-form-wrapper h3 {
+  font-size: 32px;
+  margin-bottom: 12px;
+  color: white;
+  font-weight: 700;
+}
+
+.newsletter-description {
+  font-size: 16px;
+  margin-bottom: 24px;
+  opacity: 0.9;
+}
+
+.about-newsletter-form {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.about-newsletter-form .newsletter-input {
+  flex: 1;
+  padding: 14px 20px;
+  font-size: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.95);
+  transition: all 0.3s;
+}
+
+.about-newsletter-form .newsletter-input:focus {
+  background: white;
+  border-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.about-newsletter-form .newsletter-button {
+  background: white;
+  color: #667eea;
+  border: none;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.about-newsletter-form .newsletter-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
 @media (max-width: 768px) {
-  .about-page h1 {
+  .about-main-title {
     font-size: 36px;
   }
 
+  .about-hero {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-profile-card {
+    position: static;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .about-hero-content,
   .about-content {
     padding: 24px;
   }
@@ -75,5 +261,25 @@
   .about-section h2 {
     font-size: 24px;
   }
+
+  .about-newsletter-section {
+    padding: 60px 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+    width: calc(100% + 40px);
+  }
+
+  .about-newsletter-container h2 {
+    font-size: 32px;
+  }
+
+  .about-newsletter-form-wrapper {
+    padding: 32px 20px;
+  }
+
+  .about-newsletter-form {
+    flex-direction: column;
+  }
 }
+
 

@@ -5,18 +5,19 @@ import './Header.css';
 
 const Header = () => {
   const [showDisclaimer, setShowDisclaimer] = useState(false);
-  const [showLangMenu, setShowLangMenu] = useState(false);
-  const { language, changeLanguage, t, increaseFontSize, decreaseFontSize, resetFontSize, theme, changeTheme } = useLanguage();
+  const { language, changeLanguage, t, fontSize, increaseFontSize, decreaseFontSize, resetFontSize, theme, changeTheme } = useLanguage();
 
   const handleLanguageChange = (lang) => {
     changeLanguage(lang);
-    setShowLangMenu(false);
   };
 
   return (
     <header className="header">
       <div className="header-top">
         <div className="header-container">
+          <div className="header-brand-section">
+            <span className="header-brand-name">SANKALP CHATURVEDI</span>
+          </div>
           <div className="header-accessibility">
             <button className="skip-link" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               {t('header.skipToMain')}
@@ -24,6 +25,7 @@ const Header = () => {
             <button className="screen-reader">{t('header.screenReader')}</button>
             <div className="font-size">
               <button 
+                className={fontSize === 'small' ? 'active' : ''}
                 onClick={decreaseFontSize} 
                 title="Decrease font size"
                 aria-label="Decrease font size"
@@ -31,6 +33,7 @@ const Header = () => {
                 A-
               </button>
               <button 
+                className={fontSize === 'medium' ? 'active' : ''}
                 onClick={resetFontSize} 
                 title="Reset font size"
                 aria-label="Reset font size"
@@ -38,6 +41,7 @@ const Header = () => {
                 A
               </button>
               <button 
+                className={fontSize === 'large' ? 'active' : ''}
                 onClick={increaseFontSize} 
                 title="Increase font size"
                 aria-label="Increase font size"
@@ -101,9 +105,13 @@ const Header = () => {
                 <span className="dropdown-toggle">{t('header.disclaimer')}</span>
                 {showDisclaimer && (
                   <ul className="dropdown-menu">
-                    <li><Link to="/investor-charter">{t('disclaimerMenu.investorCharter')}</Link></li>
-                    <li><Link to="/annexure-a">{t('disclaimerMenu.annexureA')}</Link></li>
-                    <li><Link to="/annexure-b">{t('disclaimerMenu.annexureB')}</Link></li>
+                    <li className="has-submenu">
+                      <span>{t('disclaimerMenu.investorCharter')}</span>
+                      <ul className="submenu">
+                        <li><Link to="/annexure-a">{t('disclaimerMenu.annexureA')}</Link></li>
+                        <li><Link to="/annexure-b">{t('disclaimerMenu.annexureB')}</Link></li>
+                      </ul>
+                    </li>
                     <li><Link to="/control-policy">{t('disclaimerMenu.controlPolicy')}</Link></li>
                     <li><Link to="/privacy-policy">{t('disclaimerMenu.privacyPolicy')}</Link></li>
                     <li><Link to="/code-of-conduct">{t('disclaimerMenu.codeOfConduct')}</Link></li>
@@ -117,25 +125,6 @@ const Header = () => {
               <li><Link to="/faq">{t('header.faq')}</Link></li>
             </ul>
           </nav>
-
-          <div className="language-selector">
-            <button 
-              className="lang-button"
-              onClick={() => setShowLangMenu(!showLangMenu)}
-            >
-              {t('header.chooseLanguage')}
-            </button>
-            {showLangMenu && (
-              <div className="lang-menu">
-                <button onClick={() => handleLanguageChange('en')}>
-                  {t('header.english')}
-                </button>
-                <button onClick={() => handleLanguageChange('hi')}>
-                  {t('header.hindi')}
-                </button>
-              </div>
-            )}
-          </div>
         </div>
       </div>
     </header>

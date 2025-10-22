@@ -1,116 +1,98 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 import './Disclaimer.css';
 
 const GrievanceRedressal = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="disclaimer-page">
       <div className="page-container">
-        <h1>Grievance Redressal</h1>
+        <h1>{t('grievance.title')}</h1>
         <div className="disclaimer-content">
           <section className="disclaimer-section">
-            <h2>Our Commitment</h2>
-            <p>
-              Learn With Sankalp is committed to providing excellent service to all our
-              clients. However, if you have any concerns or complaints, we have established
-              a transparent and efficient grievance redressal mechanism.
-            </p>
+            <h2>{t('grievance.commitment')}</h2>
+            <p>{t('grievance.commitmentText')}</p>
           </section>
 
           <section className="disclaimer-section">
-            <h2>How to File a Complaint</h2>
-            <p>
-              You can register your complaint through any of the following channels:
-            </p>
+            <h2>{t('grievance.howToFile')}</h2>
+            <p>{t('grievance.howToFileText')}</p>
             <ul>
-              <li><strong>Email:</strong> Contact us through our website contact form</li>
-              <li><strong>Written Communication:</strong> 123 Financial District, Mumbai, Maharashtra 400001</li>
-              <li><strong>Phone:</strong> During business hours</li>
+              <li><strong>{t('grievance.email')}</strong> {t('grievance.emailText')}</li>
+              <li><strong>{t('grievance.written')}</strong> {t('grievance.writtenText')}</li>
+              <li><strong>{t('grievance.phone')}</strong> {t('grievance.phoneText')}</li>
             </ul>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Information to Include in Your Complaint</h2>
+            <h2>{t('grievance.info')}</h2>
             <ul>
-              <li>Your name and contact information</li>
-              <li>Client ID or account number (if applicable)</li>
-              <li>Nature of complaint with relevant details</li>
-              <li>Date of incident or transaction</li>
-              <li>Supporting documents (if any)</li>
-              <li>Expected resolution</li>
+              <li>{t('grievance.info1')}</li>
+              <li>{t('grievance.info2')}</li>
+              <li>{t('grievance.info3')}</li>
+              <li>{t('grievance.info4')}</li>
+              <li>{t('grievance.info5')}</li>
+              <li>{t('grievance.info6')}</li>
             </ul>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Complaint Resolution Process</h2>
+            <h2>{t('grievance.process')}</h2>
             <ol>
-              <li><strong>Acknowledgment:</strong> Within 2 working days of receipt</li>
-              <li><strong>Investigation:</strong> Thorough review of the complaint</li>
-              <li><strong>Resolution:</strong> Within 7 working days from acknowledgment</li>
-              <li><strong>Communication:</strong> Written response with resolution details</li>
+              <li><strong>{t('grievance.ack')}</strong> {t('grievance.ackText')}</li>
+              <li><strong>{t('grievance.investigation')}</strong> {t('grievance.investigationText')}</li>
+              <li><strong>{t('grievance.resolution')}</strong> {t('grievance.resolutionText')}</li>
+              <li><strong>{t('grievance.communication')}</strong> {t('grievance.communicationText')}</li>
             </ol>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Grievance Officer</h2>
-            <p><strong>Name:</strong> Sankalp Chaturvedi</p>
-            <p><strong>Designation:</strong> Chief Grievance Officer</p>
-            <p><strong>Address:</strong> 123 Financial District, Mumbai, Maharashtra 400001</p>
-            <p><strong>Response Time:</strong> Within 7 working days</p>
+            <h2>{t('grievance.officer')}</h2>
+            <p><strong>{t('grievance.officerName')}</strong> {t('grievance.officerNameValue')}</p>
+            <p><strong>{t('grievance.designation')}</strong> {t('grievance.designationValue')}</p>
+            <p><strong>{t('grievance.address')}</strong> {t('grievance.addressValue')}</p>
+            <p><strong>{t('grievance.responseTime')}</strong> {t('grievance.responseTimeValue')}</p>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Escalation Process</h2>
-            <p>
-              If you are not satisfied with the resolution provided, you may escalate your
-              complaint:
-            </p>
-            <h3>Level 1 - Internal Escalation</h3>
-            <p>
-              Contact our senior management within 15 days of receiving the resolution.
-            </p>
-            <h3>Level 2 - SEBI SCORES</h3>
-            <p>
-              If the complaint remains unresolved after internal escalation, you can file
-              a complaint on the SEBI Complaints Redress System (SCORES) platform at
-              scores.gov.in
-            </p>
+            <h2>{t('grievance.escalation')}</h2>
+            <p>{t('grievance.escalationText')}</p>
+            <h3>{t('grievance.level1')}</h3>
+            <p>{t('grievance.level1Text')}</p>
+            <h3>{t('grievance.level2')}</h3>
+            <p>{t('grievance.level2Text')}</p>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Types of Grievances</h2>
-            <p>We handle complaints related to:</p>
+            <h2>{t('grievance.types')}</h2>
+            <p>{t('grievance.typesText')}</p>
             <ul>
-              <li>Service quality and delivery</li>
-              <li>Unauthorized recommendations or transactions</li>
-              <li>Billing and payment issues</li>
-              <li>Delays in service</li>
-              <li>Breach of privacy or confidentiality</li>
-              <li>Unprofessional conduct</li>
-              <li>Any other service-related concerns</li>
+              <li>{t('grievance.type1')}</li>
+              <li>{t('grievance.type2')}</li>
+              <li>{t('grievance.type3')}</li>
+              <li>{t('grievance.type4')}</li>
+              <li>{t('grievance.type5')}</li>
+              <li>{t('grievance.type6')}</li>
+              <li>{t('grievance.type7')}</li>
             </ul>
           </section>
 
           <section className="disclaimer-section">
-            <h2>Our Promise</h2>
-            <p>
-              We take all complaints seriously and are committed to:
-            </p>
+            <h2>{t('grievance.promise')}</h2>
+            <p>{t('grievance.promiseText')}</p>
             <ul>
-              <li>Fair and impartial investigation of all complaints</li>
-              <li>Timely resolution and communication</li>
-              <li>Protecting complainant confidentiality</li>
-              <li>Taking corrective action to prevent recurrence</li>
-              <li>Continuous improvement of our services</li>
+              <li>{t('grievance.promise1')}</li>
+              <li>{t('grievance.promise2')}</li>
+              <li>{t('grievance.promise3')}</li>
+              <li>{t('grievance.promise4')}</li>
+              <li>{t('grievance.promise5')}</li>
             </ul>
           </section>
 
           <section className="disclaimer-section">
-            <h2>No Retaliation Policy</h2>
-            <p>
-              We assure that no client will face any adverse consequences for raising a
-              genuine complaint. Your relationship with us will not be affected by filing
-              a grievance.
-            </p>
+            <h2>{t('grievance.noRetaliation')}</h2>
+            <p>{t('grievance.noRetaliationText')}</p>
           </section>
         </div>
       </div>
@@ -119,4 +101,3 @@ const GrievanceRedressal = () => {
 };
 
 export default GrievanceRedressal;
-
